@@ -1,0 +1,77 @@
+fieldset{
+    margin: 0 auto;
+    width: 400px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+
+fieldset legend{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0px 25px;
+}
+
+.contenidoImagen{
+    margin-left: 10px;
+    margin-top: 5px;
+    width: 55%;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.contenidoImagen input#file-input{
+    display: none;
+}
+
+.contenidoImagen label{
+    color: #4d8cf2;
+
+}
+
+.contenidoImagen img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.formEditar input{
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 0;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+input:focus {
+    background-color: #fff;
+    border-bottom: 3px solid #5fbae9;
+}
+
+input::placeholder {
+    color: #cccccc;
+}
+
+.button {
+    background-color: #4d8cf2;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+}

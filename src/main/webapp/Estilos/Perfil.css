@@ -1,0 +1,71 @@
+.contentPerfil{
+    display: flex;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+.contentImagen{
+    margin: 10px 20px;
+    padding: 20px;
+}
+
+.contentImagen input#file-input{
+    display: none;
+}
+
+.contentImagen input#file-input + label{
+    background-color: #4d8cf2;
+    padding: 12px;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 40px;
+    position: absolute;
+    margin-left: -45px;
+}
+
+.contentImagen input#file-input + label:hover{
+    background-color: #3b73ce;
+    border-color: #729fe7;
+    cursor: pointer;
+}
+
+.contentImagen img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.contentPerfil .datosPerfil{
+    display: grid;
+    padding: 45px 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.datosPerfil span#nombre{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.datosPerfil span#usuario{
+    font-size: 16px;
+    color: #a5a5a5;
+}
+
+.datosPerfil span#publicaciones,
+.datosPerfil span#seguido,
+.datosPerfil span#seguidores{
+    color: #6d6d6d;
+    font-size: 17.6px;
+}
+
+.editarPerfil button{
+    margin: 10px 20px;
+    font-size: 13px;
+    background-color: #4d8cf2;
+    padding: 15px;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+

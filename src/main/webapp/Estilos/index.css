@@ -1,0 +1,314 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9e9e9;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 1em;
+}
+
+
+/*-------------     Header de la pagina      --------------------*/
+header{
+    background: #2a2b2a;
+    height: 50px;
+    padding: 2px;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacion h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.5em;
+    margin: 0 0;
+    padding: 1px 40px;
+    letter-spacing: 4px;
+}
+
+.navegacion nav .menuItems{
+    display: flex;
+    padding: 10px;
+    margin: 5px auto;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+nav .menuItems li{
+    padding: 0 25px;
+    list-style: none;
+}
+
+.menuItems li a{
+    text-decoration: none;
+    color: white;
+}
+
+/*-----------------     Main de la pagina      --------------------*/
+main{
+    max-width: 100%;
+    margin: 0;
+    padding: 5rem 0px 20px;
+
+}
+
+main .contenedor{
+    height: auto;
+    background: white;
+    width: 600px;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px 0 rgba( 0, 0, 0, 0.3);
+}
+
+.contenedor .fieldset{
+    padding: 20px 20px;
+}
+
+h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.tituloFormulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+legend{
+    margin: 0 20px 25px;
+    font-size: 18px;
+}
+
+legend.active{
+    border-bottom: 2px solid #5fbae9;
+    color: #0d0d0d;
+}
+
+legend.inactive{
+    color: #2c2c2c;
+}
+
+/*Animacion en las etiquetas legend del formualario*/
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+    width: 100%;
+}
+
+
+/* Estilos para el formulario de Registro */
+label{
+    margin: 50px;
+}
+
+
+input[type=text], input[type=password], input[type=number], input[type=email]{
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 30px;
+    margin-bottom: 0;
+    width: 85%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=number]:focus, input[type=email]:focus {
+    background-color: #fff;
+    border-bottom: 3px solid #5fbae9;
+}
+
+input[type=text]::placeholder, input[type=password]::placeholder, input[type=number]::placeholder, input[type=email]::placeholder {
+    color: #cccccc;
+}
+
+button{
+    align-items: center;
+    flex-direction: column;
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 0px 40px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #39ace7;
+}
+
+button:active {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+.form-grupo{
+    margin-bottom: 15px;
+}
+
+.error{
+    display: none;
+}
+
+.error-activo{
+    display: block;
+    margin: 9px 40px 14px;
+    font-size: 13.8px;
+    width: 300px;
+}
+
+#footerForm {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    text-align: center;
+    padding: 25px;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+#grupo-Terminos p{
+    font-size: 11px;
+    text-decoration: none;
+    padding-left: 40px;
+    width: 80%;
+}
+
+/*Formulario de Login*/
+.inactivo{
+    display: none;
+}
+
+/*Otros*/
+*:focus {
+    outline: none;
+}
+
+#icon {
+    width:60%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#errorsito{
+    display: none;
+}
+
+#errorsito-activo{
+    display: block;
+    font-family: 'Verdana';
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+/*Contenido oculto para las validaciones*/
+.mensaje-Error{
+    display: none;
+}
+
+.mensaje-Error_Activo{
+    background: rgb(207, 39, 39);
+    padding: 3px 2px;
+    border-radius: 5px;
+    margin: 10px;
+    display: block;
+}
+
+.mensaje-Exitoso{
+    display: none;
+}
+
+.mensaje-Exitoso_Activo{
+    display: block;
+}
+
+
+/*Estilo para validacion*/
+.form-grupo_Incorrecto label{
+    color: #bb2929;
+}
+
+.form-grupo_Incorrecto input{
+    border: 3px solid #bb2929;
+}
+
+.form-grupo_Incorrecto input:focus{
+    border: 3px solid #bb2929;
+}
+
+.form-grupo_Correcto label{
+    color: #0d0d0d;
+}
+
+
+footer{
+    width: 100%;
+}
+
+footer .nav-footer{
+    width: 700px;
+    margin: 13px auto;
+    font-size: 11px;
+    text-align: center;
+}
+
+footer .nav-footer a{
+    text-decoration: none;
+    margin: 1px 2px;
+    padding: 0px 4px;
+}
+
+/*Mediaqueries*/

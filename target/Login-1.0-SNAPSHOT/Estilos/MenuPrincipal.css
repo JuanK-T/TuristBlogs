@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/*-------------------------     HEADER DE LA PAGINA    --------------------------*/
+header{
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    max-height: 60px;
+    background: #2a2b2a;
+    position: fixed;
+}
+
+.Menu{
+    left: 0;
+    right: 0;
+    padding: 2px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    margin: 0;
+    padding: 5px 15px;
+    letter-spacing: 0.8px;
+    font-weight: 800;
+    color: white;
+}
+
+.menuNavegacion ul{
+    display: flex;
+    margin-right: 20px;
+    color: white;
+}
+
+.drown-Menu li{
+    margin: 0px 20px;
+    list-style: none;
+    font-size: 18px;
+}
+
+.drown-Menu li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+}
+
+li i{
+    font-size: 25px;
+    color: white;
+}
+
+/*---------------------------        MAIN DE LA PAGINA      -------------------------*/
+main{
+    max-width: 100%;
+    margin: 0;
+    padding: 5rem 0px 20px;
+    min-height: 350px;
+}
+
+/*Estlos para el INPUT DE BUSQUEDA*/
+#formBusqueda{
+    margin: 0 auto;
+    width: 550px;
+    padding: 5px;
+}
+input.inputcito{
+    width: 75%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+#formBusqueda #botoncito{
+    background:  #3b73ce;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 5px;
+}
+/*ESTILOS PARA LA TABLA*/
+table {
+    width: 400px;
+    border-collapse: collapse;
+    border: 2px solid;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+thead{
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    background: #3b73ce;
+    color: white;
+}
+thead tr th{
+    padding: 10px;
+}
+tbody tr td{
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid;
+}
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+}
+
+footer .nav-footer{
+    width: 700px;
+    margin: 13px auto;
+    font-size: 11px;
+    text-align: center;
+}
+
+footer .nav-footer a{
+    text-decoration: none;
+    margin: 1px 2px;
+    padding: 0px 4px;
+}
+
