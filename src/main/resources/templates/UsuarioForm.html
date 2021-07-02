@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <fieldset style="margin: 0 auto;max-width: 60%;min-width: 400px;">
+            <legend> <big>Formulario de Registro</big> </legend>
+            <form th:action="@{/usuario/save}" method="POST" th:object="${form}">
+                <input type="hidden" name="idUsuario" th:field="*{usuarioDto.idUsuario}" th:value="*{usuarioDto != null} ? *{usuarioDto.idUsuario}">
+                
+                
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" class="form-control" name="contrasena" placeholder="********"
+                    th:field="*{usuarioDto.contrasena}" th:value="*{usuarioDto != null} ? *{usuarioDto.contrasena}" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="correoUsuario">Correo Usuario</label>
+                    <input type="email" class="form-control" name="correoUsuario" placeholder="andrea@mail.com"
+                    th:field="*{usuarioDto.correoUsuario}" th:value="*{usuarioDto != null} ? *{usuarioDto.correoUsuario}" required>
+                </div><br>
+                <input type="hidden" th:value="2021-07-02" th:field="*{usuarioDto.fechaCreacion}">
+                <input type="hidden" th:value="NULL" th:field="*{usuarioDto.fotoUsuario}">
+                <div class="form-group">
+                    <label for="pais">Pais</label>
+                    <input type="text" class="form-control" name="pais" list="paises">
+                    <datalist id="paises" th:object="${form}" th:field="*{usuarioDto.idPaisFK}">
+                        <option th:each="paisItem: *{lisPais}" th:value="${paisItem.idPais}" th:utext="${paisItem.nombrePais}"></option>
+                    </datalist>
+                </div><br>
+                <div class="form-group">
+                    <label for="nombreUsuario">Nombre: </label>
+                    <input type="text" class="form-control" name="nombreUsuario" placeholder="Andrea"
+                    th:field="*{usuarioDto.nombreUsuario}" th:value="*{usuarioDto != null} ? *{usuarioDto.nombreUsuario}" required>
+                </div><br>
+                <input type="hidden" th:value="Cliente" th:field="*{usuarioDto.rolUsuario}">
+                <div class="form-group">
+                    <label for="telefonoUsuario">Telefono</label>
+                    <input type="number" class="form-control" name="telefonoUsuario" placeholder="3001234567"
+                    th:field="*{usuarioDto.telefonoUsuario}" th:value="*{usuarioDto != null} ? *{usuarioDto.telefonoUsuario}" required>
+                </div><br>
+                <div class="form-group">
+                    <label for="user">Usuario</label>
+                    <input class="form-control" name="user" placeholder="Andrea"
+                    th:field="*{usuarioDto.user}" th:value="*{usuarioDto != null} ? *{usuarioDto.user}" required>
+                </div><br>
+                
+
+                <button type="submit" class="btn btn-primary" value="Guardar">Registrar</button>
+            </form>
+        </fieldset>
+    </main>
+</body>
+</html>

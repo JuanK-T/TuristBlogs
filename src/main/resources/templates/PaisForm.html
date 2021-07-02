@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TuristBlogs</h1>
+    <fieldset>
+        <legend>Registrar</legend>
+        <form th:action="@{/pais/save}" method="POST" th:object="${form}">
+            <input type="hidden" th:field="*{paisDto.idPais}" th:value="*{paisDto != null} ? *{paisDto.idPais}">
+            <div>
+                <label for="codigo">Codigo:</label>
+                <input type="text" maxlength="2" th:field="*{paisDto.codigo}" th:value="*{paisDto != null} ? *{paisDto.codigo}">
+            </div><br>
+            <div>
+                <label for="nombrePais">Nombre del Pais:</label>
+                <input type="text" th:field="*{paisDto.nombrePais}" th:value="*{paisDto != null} ? *{paisDto.nombrePais}">
+            </div><br>
+            <div>
+                <button type="submit" value="Guardar">Registrar</button>
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>

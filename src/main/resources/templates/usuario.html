@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Tabla de Usuarios</h1>
+            <a href="btn btn-primary" th:href="@{new}" role="button">Nuevos</a>
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Pais</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="us:${listUser}">
+                        <td th:text="${us.fotoUsuario}"></td>
+                        <td th:text="${us.nombreUsuario}"></td>
+                        <td th:text="${us.telefonoUsuario}"></td>
+                        <td th:text="${us.pais.nombrePais}"></td>
+                        <td th:text="${us.correoUsuario}"></td>
+                        <td>
+                            <button><a th:href="@{edit/}+ ${us.idUsuario}">Actualizar</a></button>
+                            <button><a th:href="@{delete/} + ${us.idUsuario}">Eliminar</a></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

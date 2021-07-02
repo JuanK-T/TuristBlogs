@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="container">
+        <h1>Pais</h1>
+
+        <a href="btn btn-primary" th:href="@{new}" role="button">Nuevos</a>
+
+        <table class="table table-responsive">
+            <thead>
+                <th>id</th>
+                <th>Codigo</th>
+                <th>Nombre Pais</th>
+                <th colspan="2">Acciones</th>
+            </thead>
+            <tbody>
+                <tr th:each="pai:${LisPais}">
+                    <td th:text="${pai.idPais}"></td>
+                    <td th:text="${pai.codigo}"></td>
+                    <td th:text="${pai.nombrePais}"></td>
+                    <td>
+                        <button><a th:href="@{edit/}+ ${pai.idPais}" role="button">Actualizar</a></button>
+                        <button><a th:href="@{delete/} + ${pai.idPais}">Eliminar</a></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
